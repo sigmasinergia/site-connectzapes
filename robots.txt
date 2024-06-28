@@ -1,0 +1,16 @@
+User-agent: *
+
+User-agent: Googlebot
+Disallow:
+
+User-agent: AdsBot-Google
+Disallow:
+
+User-agent: Googlebot-Image
+Disallow:
+
+Allow: /
+Disallow: /phpmailer-6.9.1
+Disallow: /phpmailer-6.9.1/* 
+
+Sitemap: https://connectzap.com.br/sitemap.xml

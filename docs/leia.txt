@@ -1,0 +1,16 @@
+framework buma:
+	https://bulma.io/documentation
+	https://bulma.io/documentation/form/general/
+	https://bulma.io/documentation/components/navbar/
+
+ícones free e pro:
+	https://fontawesome.com/v6/icons?q=auto&o=r
+
+Minificar:
+	https://www.minifier.org/
+	
+Site de homologação:
+	https://painelhml.connectzap.es
+
+Publicação na Web (não tem conta FTP para programa de FTP client):
+	https://webeditorsrv3.connectzap.es/atheos/

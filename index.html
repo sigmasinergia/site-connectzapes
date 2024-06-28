@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="language" content="pt-br">
+  	<title>API WhatsApp com integração para sistema ERP - ConnectZap</title>
+  	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  	<link rel="stylesheet" href="https://bulma.io/vendor/fontawesome-free-6.5.2-web/css/all.min.css">  		
+	
+	<!--<link rel="stylesheet" href="assets/wp/floating-wpp.css">
+  	<link rel="stylesheet" href="css/style.css">-->
+
+  	<link rel="stylesheet" href="assets/wp/floating-wpp.min.css">
+  	<link rel="stylesheet" href="css/style.min.css">
+
+  	<link rel="icon" type="image/png" href="img/icone.webp">
+	<link rel="shortcut icon" href="img/icone.webp">
+    <link rel="apple-touch-icon" href="img/icone.webp">  
+	<meta name="msapplication-TileImage" content="img/icone.webp">	
+
+	<script type="application/ld+json">
+        {
+        "@context" : "https://schema.org",
+        "@type" : "LocalBusiness",
+        "name" : "ConnectZap",
+        "image" : "https://connectzap.com.br/img/logo-connectzap-200.svg",
+        "telephone" : "21981587295",
+        "email" : "contato@Connectzap.com.br",
+        "address" : {
+        "@type" : "PostalAddress",
+        "streetAddress" : "Rua 24 de Maio, 1081 Sala 604",
+        "addressLocality" : "Rio de Janeiro",
+        "addressRegion" : "RJ",
+        "addressCountry" : "Brasil",
+        "postalCode" : "20725000"
+        },
+        "openingHoursSpecification" :
+        [
+
+        {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+        "Segunda",
+        "Terça",
+        "Quarta",
+        "Quinta",
+        "Sexta"
+        ],
+        "opens": "08:00",
+        "closes": "18:00"
+        }
+
+        ],
+        "url" : "https://connectzap.com.br/"
+        }
+    </script>
+    <meta name="description" content="A melhor API WhatsApp com integração para seu sistema ERP">
+    <meta name="author" content="1Mark Marketing Digital">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="reply-to" content="contato@Connectzap.com.br">
+    <meta name="revisit-after" content="7 days">
+    <meta name="rating" content="General">
+    <meta name="title" content="API WhatsApp com integração para sistema ERP - ConnectZap">
+    <meta name="keywords" content="api whatsapp,whatsapp business api,integração com api,integração com sistema erp,api whatsapp erp,php,javascript,api,protheus,totvs">
+    <meta name="identifier" content="https://connectzap.com.br/">
+    <meta name="coverage" content="Worldwide">
+    <meta name="organization-Email" content="contato@Connectzap.com.br">
+    <meta name="copyright" content="ConnectZap">
+    <meta name="country" content="Brazil">
+    <link rel="canonical" href="https://connectzap.com.br/">
+
+	<style>
+				
+		.bg-overlay {
+			position: relative;
+			/*width: 100%;
+			height: 100vh;*/
+		}	
+		.bg-overlay::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-image: url('img/bg-main.webp');
+			background-position: top center;
+			background-repeat: no-repeat;
+			background-size: 100% auto;
+			opacity: 0.3;
+			/*z-index: 1;*/
+		}
+		.container {
+			position: relative;
+			/*z-index: 2;*/
+			/* Conteúdo adicional aqui */
+		}
+
+		.bg-overlay-green {
+			position: relative;
+			/*width: 100%;
+			height: 100vh;*/
+		}
+		.bg-overlay-green::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			
+			background-image: url('img/bg-main.webp');
+			background-position: top center;
+			background-repeat: no-repeat;
+			background-size: 100% auto;
+			opacity: 0.3;
+			/*z-index: 1;*/
+		}
+
+		.bg-overlay-lateral-direita {
+			position: relative;
+			/*width: 100%;
+			height: 100vh;*/
+		}
+
+		.bg-overlay-lateral-direita::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-image: url('img/bg-main-lateral-direita.webp');
+			background-position: top right;
+			background-repeat: no-repeat;
+			background-size: 35% auto;
+			opacity: 0.3;			
+			/*z-index: 1;*/
+		}
+
+		.bg-overlay-lateral-esquerda {
+			position: relative;
+			/*width: 100%;
+			height: 100vh;*/
+		}
+
+		.bg-overlay-lateral-esquerda::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			
+			background-image: url('img/bg-main-lateral-esquerda.webp');
+			
+			background-position: top left;
+			background-repeat: no-repeat;
+			background-size: 100% auto;
+			opacity: 0.3;
+
+			/*z-index: 1;*/
+		}
+
+	</style>
+
+	<style>			
+
+		/* essas classes é somente para index */
+		.card-exemplo{
+			min-height: 300px !important;
+		}
+		.card-cliente{
+			min-height: 340px !important;
+		}
+		.card-solucao{
+			min-height: 340px !important;
+		}
+
+	  </style>
+</head>
+<body>
+
+	<div class="floating-wpp" style="display:none"></div>
+	
+	<section class="bg-overlay">
+		<div class="content">
+
+			<nav class="navbar container" role="navigation" aria-label="main navigation">
+				<div class="navbar-brand">
+				
+					<a class="navbar-item logo-navbar" href="/">
+
+						<object data="img/logo-connectzap-200.svg" type="image/svg+xml">
+							Seu navegador não suporta SVG
+						</object>
+	
+					</a>
+			
+					<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+						<span aria-hidden="true"></span>
+						<span aria-hidden="true"></span>
+						<span aria-hidden="true"></span>
+						<span aria-hidden="true"></span>
+					</a>
+					
+				</div>
+			
+				<div id="navbarBasicExample" class="navbar-menu">
+					<div class="navbar-start">
+					
+						<a class="navbar-item has-text-success" href="/"><strong>Home</strong></a>
+						<a class="navbar-item has-text-success" href="/avaliacao-gratuita#contratar"><strong>Avaliação Gratuita</strong></a>	  				
+						<a class="navbar-item has-text-success" href="/quem-somos"><strong>Quem Somos</strong></a>
+			
+						<div class="navbar-item has-dropdown is-hoverable">			  		
+							<a class="navbar-link has-text-success"><strong>Contato</strong></a>	  
+							<div class="navbar-dropdown">
+								<a class="navbar-item is-selected" href="https://painel.connectzap.com.br/login/" target="_blank">Área do Cliente</a>
+								<a class="navbar-item" href="https://blog.connectzap.com.br">Blog</a>
+								<a class="navbar-item" href="/contato">Fale Conosco</a>
+								<hr class="navbar-divider">
+								<a class="navbar-item" href="/suporte">Suporte Técnico</a>
+							</div>
+						</div>			
+	
+					</div>
+			
+					<div class="navbar-end">
+						<div class="navbar-item">
+							<div class="buttons">
+								<!--<a class="button is-success">Quero Iniciar</a>-->						
+								<a class="button is-primary" href="/avaliacao-gratuita#contratar"><strong>Quero Iniciar</strong></a>
+								<!--<a href="#"><img src="img/lang-es.webp" alt="Trocar para idioma Espanhol"></a>-->
+								<a class="button is-light btn-login" href="#">Entrar</a>
+								<!--<div class="login-form-externo is-hidden"></div>-->
+
+
+								<!--<button id="toggleButton" class="button is-primary">Mostrar Mais</button>-->
+								
+
+
+							</div>
+							<div class="login-form-externo is-hidden"></div>
+							<!--<div id="toggleContent" class="login-form-externo is-hidden">
+								<div class="box mt-2">
+									<p>Este é o conteúdo adicional que pode ser mostrado ou escondido.</p>
+								</div>
+							</div>-->
+						</div>
+					</div>
+	
+				</div>
+			</nav>
+			
+			<div class="container mt-6">
+
+				<div class="columns">
+					<div class="column">
+	
+						<p class="has-text-primary has-text-weight-medium">BEM VINDOS AO CONNECTZAP</p>
+						
+						<h1 class="title has-text-success has-text-weight-bold">A melhor API WhatsApp com integração para seu sistema ERP</h1>
+						<p>
+						Automatize de forma inteligente e eficiente a comunicação com clientes e colaboradores através da API WhatsApp da ConnectZap, 
+						que possibilita a integração com sistema ERP de gestão empresarial.
+						</p>
+						<div class="buttons mt-5">
+						<a class="button is-success" href="/avaliacao-gratuita#contratar"><strong>Avaliação Gratuita</strong></a>
+						</div>
+	
+					</div>
+					<div class="column">
+	
+						<img src="img/site3-min-1024x846.webp" alt="A melhor API WhatsApp com integração para o seu sistema ERP de Gestão">
+	
+					</div>
+				</div>
+				
+			</div>
+
+			<!--<div class="container">
+
+				<div class="columns">
+					<div class="column">
+					
+						
+						<div class="card bg-gradiente-layer">
+							<div class="card-content">
+							<div class="content text-white">
+								<h4 class="text-white">WhatsApp Business API</h4>
+								<p>Faça a integração com seu ERP criando pontes de comunicação com a API do WhatsApp para enviar mensagens diretamente do seu software.</p>
+							</div>
+							</div>
+						</div>
+	
+						
+					</div>
+					<div class="column">
+					
+	
+						<div class="card bg-gradiente-layer">
+							<div class="card-content">
+							<div class="content text-white">
+								<h4 class="text-white">API para enviar mensagens</h4>
+								<p>Saiba mais sobre a API WhatsApp para enviar mensagens instantâneas e automatize respostas para seus clientes onde estiverem.</p>
+							</div>
+							</div>
+						</div>
+	
+					
+					</div>
+					<div class="column">
+						
+						<div class="card bg-gradiente-layer">
+							<div class="card-content">
+							<div class="content text-white">
+								<h4 class="text-white">API de WhatsApp FAQ</h4>
+								<p>Confira as dúvidas mais comuns na hora de contratar o ConnectZap. Se precisar de mais informações, não hesite em nos contatar.</p>
+							</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+
+			</div>-->
+
+		</div>
+	</section>
+
+
+	<!-- banner
+	<section class="section">			
+		<img src="https://static.vecteezy.com/system/resources/previews/000/381/578/original/vector-abstract-colorful-wave-banner-background.jpg" alt="Image description"/>						
+	</section>
+	-->
+	
+	<!--
+	has-background-primary
+	has-background-success
+	warning
+	link
+	-->
+	<section class="section has-background-success bg-overlay-green">
+		<div class="container mt-6 mb-6 has-text-centered">
+
+			<h3 class="subtitle text-white is-size-6 has-text-weight-normal">PORQUE SUA EMPRESA PRECISA DO CONNECTZAP</h3>
+			<h2 class="title text-white">Veja por que você precisa integrar seu ERP ao WhatsApp</h2>
+
+			<div class="columns">
+				<div class="column">
+				
+					
+					<div class="card bg-success-color-dark">
+						<div class="card-content">
+						<div class="content text-white">
+							<div>
+								<img src="img/icon-users.webp" alt="Mais de 2 Milhões de Usuários">
+							</div>					
+							<h4 class="text-white">+ 2 Milhões de Usuários</h4>
+							<p>Com mais de 2 milhões de usuários o WhatsApp é a plataforma de comunicação mais eficiente no mercado.</p>			  
+						</div>
+						</div>
+					</div>
+
+					
+				</div>
+				<div class="column">
+				
+
+					<div class="card bg-success-color-dark">
+						<div class="card-content">
+						<div class="content text-white">
+							<div>
+								<img src="img/icon-security.webp" alt="Rápido e Seguro">
+							</div>					
+							<h4 class="text-white">Rápido e Seguro</h4>
+							<p>A plataforma WhatsApp é robusta e garante uma comunicação mais rápida, eficiente e segura comparado aos seus concorrentes.</p>
+						</div>
+						</div>
+					</div>
+
+				
+				</div>
+				<div class="column">
+				
+
+					<div class="card bg-success-color-dark">
+						<div class="card-content">
+						<div class="content text-white">
+							<div>
+								<img src="img/icon-setas-flechas.webp" alt="Acesso Mobile">
+							</div>					
+							<h4 class="text-white">Acesso Mobile</h4>
+							<p>Os usuários do mundo todo acessam a plataforma WhatsApp a toda hora e em qualquer lugar através de diversos dispositivos.</p>
+						</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+
+
+	<section class="section bg-overlay-lateral-direita">
+		<div class="container content mt-6 mb-6">
+
+			<div class="columns">
+				<div class="column">
+
+					<h3 class="subtitle has-text-primary is-size-6">NOSSA SOLUÇÃO</h3>
+					<h2 class="title has-text-success">Como o ConnectZap pode ajudar a sua empresa com a API WhatsApp</h2>
+					<p>
+						Através de uma integração da API ConnectZap com o seu ERP podemos criar uma ponte de comunicação para envio de mensagens diretamente do seu sistema ERP para o WhatsApp.
+					</p>
+					<p class="mt-6"><strong>A integração com a API ConnectZap é fácil e rápida!</strong></p>
+					<p class="mt-4">
+						Entenda facilmente esse processo com os 4 passos que destacamos ao lado. Além disso, contamos ainda com documentação e exemplos para diferentes linguagens de programação.
+					</p>
+					<div class="buttons mt-6">
+					  <a class="button is-success" href="/avaliacao-gratuita#contratar"><i class="fa-solid fa-rocket pr-2"></i><strong>Avaliar Agora</strong></a>
+					</div>
+
+				</div>
+				<div class="column">
+
+					<div class="columns">
+						<div class="column has-text-centered">
+						
+						  
+							<div class="card">
+							  <div class="card-content">
+							  <div class="content">
+								  <div>
+									  <img src="img/icon-erp.webp" alt="Crie uma Mensagem no ERP" class="resize-50">
+								  </div>					
+								  <h4 class="has-text-success">01-Crie uma mensagem no ERP</h4>
+								  <p>Durante o seu processo você cria uma mensagem para ser enviada ao usuário.</p>			  
+							  </div>
+							  </div>
+							</div>
+
+
+						</div>
+						<div class="column has-text-centered">
+						
+						  
+							<div class="card">
+							  <div class="card-content">
+							  <div class="content">
+								  <div>
+									  <img src="img/icon-connectzap.webp" alt="ConnectZap Recebe a Mensagem" class="resize-50">
+								  </div>					
+								  <h4 class="has-text-success">02-ConnectZap recebe a mensagem</h4>
+								  <p>O ConnectZap Recebe a solicitação e faz o envio direto para o WhatsApp.</p>			  
+							  </div>
+							  </div>
+							</div>
+
+
+						</div>
+					</div>
+
+					<div class="columns">
+						<div class="column has-text-centered">
+						
+						  
+							<div class="card">
+							  <div class="card-content">
+							  <div class="content">
+								  <div>
+									  <img src="img/icon-whatsapp.webp" alt="WhatsApp Recebe a Notificação" class="resize-50">
+								  </div>					
+								  <h4 class="has-text-success">03-WhatsApp recebe a notificação</h4>
+								  <p>O WhatsApp recebe a solicitação do ConnectZap e dispara a mensagem para o usuário.</p>			  
+							  </div>
+							  </div>
+							</div>
+
+
+						</div>
+						<div class="column has-text-centered">
+						
+						  
+							<div class="card">
+							  <div class="card-content">
+							  <div class="content">
+								  <div>
+									  <img src="img/icon-chat.webp" alt="04-Usuário Recebe a Mensagem" class="resize-50">
+								  </div>					
+								  <h4 class="has-text-success">04-Usuário recebe a mensagem</h4>
+								  <p>O usuário recebe a mensagem enviada diretamente no seu aplicativo do WhatsApp.</p>			  
+							  </div>
+							  </div>
+							</div>
+
+
+						</div>
+					</div>
+			  
+
+				</div>
+			</div>
+			
+		</div>
+	</section>
+
+
+	<section class="section has-background-success bg-overlay-green">
+		<div class="container content mt-6 mb-6 has-text-centered">
+
+			<h3 class="subtitle text-white is-size-6 has-text-weight-normal mb-6">BENEFÍCIOS DO CONNECTZAP</h3>
+			<h2 class="title text-white">Quais as vantagens que a sua empresa terá com nossa solução</h2>
+			<p class="text-white mb-6">Veja as principais vantagens ao contratar o ConnectZap</p>
+
+			<div class="columns">
+				<div class="column">
+				
+					
+					<div class="card">
+						<div class="card-content">
+							<div class="content">
+								<div>
+									<i class="fa-solid fa-tower-cell fa-2x has-text-success"></i>
+								</div>					
+								<h4>Integra WhatsApp com ERP</h4>
+								<p>Comunicação mais eficiente ao enviar mensagens do seu ERP direto para o WhatsApp do cliente ou colaborador.</p>			  
+							</div>
+						</div>
+					</div>
+
+					
+				</div>
+				<div class="column">
+				
+
+					<div class="card">
+						<div class="card-content">
+							<div class="content">
+								<i class="fa-solid fa-robot fa-2x has-text-success"></i>
+								<h4>Automatiza Processos</h4>
+								<p>Com a comunicação automática, poderá informar ao cliente ou colaborador no exato momento do processo.</p>
+							</div>
+						</div>
+					</div>
+
+				
+				</div>
+				<div class="column">
+				
+
+					<div class="card">
+						<div class="card-content">
+							<div class="content">
+								<i class="fa-solid fa-wand-sparkles fa-2x has-text-success"></i>
+								<h4>Baixo custo na Comunicação</h4>
+								<p>Contrate a API ConnectZap e envie quantas mensagens desejar sem custos adicionais e sem surpresas.</p>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+
+			<div class="columns">
+				<div class="column">
+				
+				
+					<div class="card">
+						<div class="card-content">
+							<div class="content">
+								<i class="fa-solid fa-life-ring fa-2x has-text-success"></i>
+								<h4>Suporte Gratuito</h4>
+								<p>Suporte Gratuito para lhe auxiliar na integração do ConnectZap ao seu ERP.</p>
+							</div>
+						</div>
+					</div>
+	
+				
+				</div>
+				<div class="column">
+				
+	
+					<div class="card">
+						<div class="card-content">
+							<div class="content">					  
+								<i class="fa-solid fa-code fa-2x has-text-success"></i>					  
+								<h4>Código Fonte Gratuito</h4>
+								<p>Receba programas fonte para integração com ERP Protheus gratuitos.</p>
+							</div>
+						</div>
+					</div>
+	
+				
+				</div>
+				<div class="column">
+				
+	
+					<div class="card">
+						<div class="card-content">
+							<div class="content">
+								<i class="fa-solid fa-shield-halved fa-2x has-text-success"></i>					
+								<h4>API 100% Estável</h4>
+								<p>API 100% estável garantindo que não terá interrupções na comunicação.</p>
+							</div>
+						</div>
+					</div>
+				
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+
+
+	<section class="section bg-overlay-lateral-esquerda">
+		<div class="container content mt-6 mb-6 has-text-centered">
+
+			<h3 class="subtitle is-size-6 has-text-weight-normal has-text-primary">AUTOMATIZE PROCESSOS DE COMUNICAÇÃO</h3>
+			<h2 class="title has-text-success">Exemplos de Automações</h2>
+			<p class="mb-6">Veja alguns tipos de automações para envio de  mensagens que podem ser criadas para automatizar sua comunicação</p>
+
+			<div class="columns">
+				<div class="column">
+				
+					
+					<div class="card card-exemplo">
+						<div class="card-content">
+						<div class="content">
+							<div>
+								<img src="img/icon-boleto.webp" alt="Envio de Boletos">
+							</div>					
+							<h4>Envio de Boletos</h4>
+							<p>Envie boletos bancários, códigos de pagamento, notificações de vencimento e cobranças.</p>			  
+						</div>
+						</div>
+					</div>
+
+					
+				</div>
+				<div class="column">
+				
+					
+					<div class="card card-exemplo">
+						<div class="card-content">
+						<div class="content">
+							<div>
+								<img src="img/icon-compras.webp" alt="Solicitação de Aprovações">
+							</div>					
+							<h4>Solicitação de Aprovações</h4>
+							<p>Envie solicitações de aprovações em solicitações de compras, cotações, pedidos de compras e outros.</p>			  
+						</div>
+						</div>
+					</div>
+
+					
+				</div>
+			</div>		
+			
+			<div class="columns">
+				<div class="column">
+				
+
+					<div class="card card-exemplo">
+						<div class="card-content">
+							<div class="content">
+								<div>
+									<img src="img/icon-invoice.webp" alt="Envio de Notas Fiscais">
+								</div>	
+								<h4>Envio de Notas Fiscais</h4>
+								<p>Envie notas fiscais diretamente ao WhatsApp do cliente no momento da emissão.</p>
+							</div>
+						</div>
+					</div>
+
+				
+				</div>
+				<div class="column">
+				
+
+					<div class="card card-exemplo">
+						<div class="card-content">
+							<div class="content">
+								<div>
+									<img src="img/icon-notificacoes.webp" alt="Notificações Diversas">
+								</div>	
+								<h4>Notificações Diversas</h4>
+								<p>Informe saldo em estoque, não conformidade, procedimento de segurança, defeitos de hardware e outros.</p>
+							</div>
+						</div>
+					</div>
+
+				
+				</div>
+			</div>	
+
+			<div class="columns">
+				<div class="column">
+				
+
+					<div class="card card-exemplo">
+						<div class="card-content">
+							<div class="content">
+								<div>
+									<img src="img/icon-cheque.webp" alt="Envio de Contra Cheques">
+								</div>	
+								<h4>Envio de Contra Cheques</h4>
+								<p>Envio de contra cheques mensais, 13º Salário, recibos de férias, comunicados diversos individuais ou em grupo.</p>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				<div class="column">
+				
+
+					<div class="card card-exemplo">
+						<div class="card-content">
+							<div class="content">
+								<div>
+									<img src="img/icon-imagem.webp" alt="Envio de diversos formatos">
+								</div>	
+								<h4>Envio de diversos formatos</h4>
+								<p>Envie textos, imagens, áudios, planilhas, documentos diversos, arquivos e mais.</p>
+							</div>
+						</div>
+					</div>
+					
+
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+
+
+	<section class="section">
+		<div class="container mt-6 mb-6 has-text-centered">
+
+			<h2 class="title">Empresas que já se comunicam de forma eficiente</h2>
+			<p>Conheça alguns dos nossos clientes que já utilizam a plataforma e estão melhorando a comunicação com clientes e colaboradores.</p>
+	
+			<div class="columns">
+			  <div class="column"><img src="img/cliente-tc-pneus.webp" alt="TC Pneus"></div>
+			  <div class="column"><img src="img/cliente-npx.webp" alt="NPX Sistemas"></div>
+			  <div class="column"><img src="img/cliente-foco.webp" alt="Foco"></div>
+			  <div class="column"><img src="img/cliente-e-plast.webp" alt="EPlast"></div>
+			  <div class="column"><img src="img/cliente-innova.webp" alt="Innova Nordeste"></div>
+			  <div class="column"><img src="img/cliente-orla-rio.webp" alt="Orla Rio"></div>
+			</div>	
+
+		</div>		
+	</section>
+
+
+
+
+	<section class="section has-background-success bg-overlay-green">
+		<div class="container content mt-6 mb-6 has-text-centered">
+
+			<h3 class="subtitle text-white is-size-6 has-text-weight-normal mb-6">A SUA SATISFAÇÃO É NOSSA META</h3>
+			<h2 class="title text-white">O que os nossos clientes dizem</h2>
+
+			<div class="columns">
+				<div class="column">
+
+					<div class="card card-cliente">
+						<div class="card-content has-text-left">
+							<div>
+								<i class="fa-solid fa-star text-warning"></i>
+								<i class="fa-solid fa-star text-warning"></i>
+								<i class="fa-solid fa-star text-warning"></i>
+								<i class="fa-solid fa-star text-warning"></i>
+								<i class="fa-solid fa-star text-warning"></i>
+								<!--<i class="fa-solid fa-star-half-stroke"></i>-->
+							</div>
+							<div class="content">
+								Antes da implantação do ConnectZap a comunicação com nossos clientes era somente por email. 
+								Agora, facilitamos o recebimento de boletos e notas fiscais, reduzindo muito a inadimplência.
+							</div>
+							<div class="media">
+								<div class="media-left">
+								<figure class="image is-48x48">
+									<img src="img/pessoa-nickolas-meirelles.webp" alt="Nickolas Meirelles é CEO da NPX Sistemas" class="is-rounded" />
+								</figure>
+								</div>
+								<div class="media-content">
+								<p class="title is-6">Nickolas Meirelles</p>
+								<p class="subtitle is-7 pt-2">CEO NPX Sistemas</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="column">
+
+					<div class="card card-cliente">
+						<div class="card-content has-text-left">
+							<div>
+								<i class="fa-solid fa-star text-warning"></i>
+								<i class="fa-solid fa-star text-warning"></i>
+								<i class="fa-solid fa-star text-warning"></i>
+								<i class="fa-solid fa-star text-warning"></i>
+								<i class="fa-solid fa-star text-warning"></i>
+							</div>
+							<div class="content pb-6">
+								Agora posso enviar acompanhamentos do faturamento de meus clientes em tempo real e de forma prática.
+							</div>
+							<div class="media">
+								<div class="media-left">
+								<figure class="image is-48x48">
+									<img src="img/pessoa-fabricio-cardoso.webp" alt="Fabrício Cardoso é diretor da Innova Nordeste" class="is-rounded" />
+								</figure>
+								</div>
+								<div class="media-content">
+								<p class="title is-6">Fabrício Cardoso</p>
+								<p class="subtitle is-7 pt-2">Diretor na Innova Nordeste</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="column">
+
+					<div class="card card-cliente">
+						<div class="card-content has-text-left">
+							<div>
+								<i class="fa-solid fa-star text-warning"></i>
+								<i class="fa-solid fa-star text-warning"></i>
+								<i class="fa-solid fa-star text-warning"></i>
+								<i class="fa-solid fa-star text-warning"></i>
+								<i class="fa-solid fa-star text-warning"></i>
+							</div>
+							<div class="content pb-5">
+								Conseguimos automatizar envios publicitários de nossos clientes. O que facilitou foi receber os fontes para conectar com o Protheus.
+							</div>
+							<div class="media">
+								<div class="media-left">
+								<figure class="image is-48x48">
+									<img src="img/pessoa-marcelo-hruschka.webp" alt="Marcelo Hruschka da Foco Rio" class="is-rounded" />
+								</figure>
+								</div>
+								<div class="media-content">
+								<p class="title is-6">Marcelo Hruschka</p>
+								<p class="subtitle is-7 pt-2">Foco Rio</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			
+		</div>
+	</section>
+
+
+
+
+
+	<section class="section bg-overlay-lateral-direita">
+		<div class="container mt-6 mb-6">
+
+			<div class="columns">
+				<div class="column">
+	
+					<div class="columns">
+						<div class="column">
+			
+							<div class="card p-0">
+								<div class="card-image">
+									<figure class="image"><!--is-4by3-->
+									  <img src="img/pessoa-alan-martines.webp" alt="Alan Martines"
+									  />
+									</figure>
+								  </div>
+								<div class="card-content has-background-success">
+									<div class="media">
+										<div class="media-content">
+											<p class="title is-4 text-white">Alan Martines</p>
+											<p class="subtitle is-6 text-white">Chief Technology Officer</p>
+										</div>
+									</div>
+								</div>
+							</div>
+	
+						</div>
+						<div class="column">
+							
+							<div class="card p-0">
+								<div class="card-image">
+									<figure class="image"><!--is-4by3-->
+									  <img src="img/pessoa-jader-berto.webp" alt="Jader Menezes Berto"/>
+									</figure>
+								  </div>
+								<div class="card-content has-background-success">
+									<div class="media">
+										<div class="media-content">
+											<p class="title is-4 text-white">Jader M. Berto</p>
+											<p class="subtitle is-6 text-white">Chief Executive Officer</p>
+										</div>
+									</div>
+								</div>
+							</div>
+			
+						</div>
+					</div>
+	
+				</div>
+				<div class="column mt-6">
+	
+					<h3 class="subtitle has-text-primary is-size-6 has-text-weight-normal">CONHEÇA NOSSA EQUIPE</h3>
+					<h2 class="title">Nossa Equipe</h2>
+					<p>Profissionais especialistas em soluções ERP com experiência em pequenas médias e grandes empresas, criando soluções para melhorar a comunicação e produtividade impactando positivamente os lucros de nossos clientes.</p>
+	
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+
+	<section class="section bg-overlay-lateral-esquerda">
+		<div class="container mt-6 mb-6 has-text-centered">
+		
+			<h3 class="subtitle has-text-primary is-size-6 has-text-weight-normal">FAQ</h3>
+			<h2 class="title has-text-success">Perguntas Frequentes</h2>
+			<p class="mb-20">Veja as principais dúvidas ao contratar o ConnectZap. Se precisar de mais informações entre em contato conosco.</p>
+	
+			<div class="card card-faq">
+				<header class="card-header card-header-faq">
+				  <p class="card-header-title collapse-button" data-collapse="collapsible-content-1">Essa integração funciona tanto para Android quanto para IOS?</p>
+				  <button class="card-header-icon collapse-button" aria-label="toggle" data-collapse="collapsible-content-1">
+					<span class="icon"><i class="fas fa-angle-down" aria-hidden="true"></i></span>
+				  </button>
+				</header>
+				<div class="card-content is-hidden" id="collapsible-content-1">
+				  <div class="content">
+					Sim. A mensagem será enviada para qualquer dispositivo que possibilite a instalação do aplicativo oficial do WhatsApp. Seja ele celular ou tablet.
+				  </div>
+				</div>
+			</div>
+
+			<div class="card card-faq">
+				<header class="card-header card-header-faq">
+				  <p class="card-header-title collapse-button" data-collapse="collapsible-content-2">Existe limite de mensagens a serem enviadas?</p>
+				  <button class="card-header-icon collapse-button" aria-label="toggle" data-collapse="collapsible-content-2">
+					<span class="icon"><i class="fas fa-angle-down" aria-hidden="true"></i></span>
+				  </button>
+				</header>
+				<div class="card-content is-hidden" id="collapsible-content-2">
+				  <div class="content">
+					Não. Ao adquirir o Connect Zap o cliente poderá vincular o seu dispositivo com WhatsApp através do WhatsApp Web através de um QRCode e poderá enviar quantas mensagens quiser.
+				  </div>
+				</div>
+			</div>
+
+			<div class="card card-faq">
+				<header class="card-header card-header-faq">
+				  <p class="card-header-title collapse-button" data-collapse="collapsible-content-3">As mensagens ficam gravadas na plataforma Connect Zap?</p>
+				  <button class="card-header-icon collapse-button" aria-label="toggle" data-collapse="collapsible-content-3">
+					<span class="icon"><i class="fas fa-angle-down" aria-hidden="true"></i></span>
+				  </button>
+				</header>
+				<div class="card-content is-hidden" id="collapsible-content-3">
+				  <div class="content">
+					Não. O Connect Zap não grava nenhuma mensagem ou número para qual será enviado. Ele apenas faz a comunicação do sistema com o WhatsApp do usuário connectado na plataforma.
+				  </div>
+				</div>
+			</div>
+
+			<div class="card card-faq">
+				<header class="card-header card-header-faq">
+				  <p class="card-header-title collapse-button" data-collapse="collapsible-content-4">Qual sistema pode integrar com o Connect Zap?</p>
+				  <button class="card-header-icon collapse-button" aria-label="toggle" data-collapse="collapsible-content-4">
+					<span class="icon"><i class="fas fa-angle-down" aria-hidden="true"></i></span>
+				  </button>
+				</header>
+				<div class="card-content is-hidden" id="collapsible-content-4">
+				  <div class="content">
+					A maioria dos sistemas. Pois o Connect Zap utiliza o Rest/JSON como padrão para a leitura e envio das mensagens.
+				  </div>
+				</div>
+			</div>
+						
+			<a class="button is-success mt-6" href="/api-whatsapp-faq"><i class="fa-solid fa-question-circle pr-2"></i><strong>Consulte mais perguntas em nossa FAQ</strong></a>
+
+		</div>		
+	</section>
+
+
+
+	<section class="section bg-gradient-success-invert">
+		<div class="container">
+
+			<div class="columns">
+				<div class="column">
+	
+					<h2 class="title text-white">30 dias para avaliar gratuitamente</h2>
+					<p class="text-white">Experimente nossa plataforma gratuitamente por 30 dias e revolucione a forma de se comunicar com seus clientes e colaboradores.</p>		
+					<div class="buttons mt-30">
+						<a class="button is-success bg-success-color-dark" href="/avaliacao-gratuita#contratar"><strong>Quero Iniciar</strong></a>
+					</div>				
+	
+				</div>
+				<div class="column">
+					
+					<img src="img/avaliacao-gratuita.webp" alt="30 dias para avaliar gratuitamente a melhor API WhatsApp">
+					
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+
+	<footer class="footer">
+		<div class="container">
+
+			<div class="content">			
+			
+				<div class="columns">
+				  <div class="column has-text-centered">
+	
+					  <img src="img/logo-connectzap.webp" alt="ConnectZap" class="resize-50">
+					<p class="p-30">Automatize a comunicação usando a melhor API do WhatsApp com integração para o seu ERP</p>
+					<div>
+						<a class="button is-facebook" href="https://www.facebook.com/Connectzap" target="_blank">
+							<span class="icon"><i class="fab fa-facebook has-text-success"></i></span></a>		  
+						<a class="button is-instagram" href="https://www.instagram.com/connectzap/" target="_blank">
+							<span class="icon"><i class="fab fa-instagram has-text-success"></i></span></a>
+						<a class="button is-linkedin" href="https://www.linkedin.com/company/connectzap/" target="_blank">
+							<span class="icon"><i class="fab fa-linkedin has-text-success"></i></span></a>
+						<a class="button is-youtube" href="https://www.youtube.com/channel/UCisX-6b8iJXdqDKiAlefojA" target="_blank">
+							<span class="icon"><i class="fab fa-youtube has-text-success"></i></span></a>
+					</div>
+	
+				  </div>
+				  <div class="column">
+	
+						<h2 class="has-text-success">Links Rápidos</h2>
+						<p><a href="/avaliacao-gratuita#contratar" class="text-success-dark">Avaliação Gratuita</a></p>
+						<p><a href="/suporte" class="text-success-dark">Suporte</a></p>
+						<p><a href="/quem-somos" class="text-success-dark">Quem Somos</a></p>
+						<p><a href="https://painel.connectzap.com.br/login/" target="_blank" class="text-success-dark">Área do Cliente</a></p>
+						<p><a href="https://blog.connectzap.com.br" class="text-success-dark">Blog</a></p>
+						<p><a href="/whatsapp-business-api" class="text-success-dark">WhatsApp Business API</a></p>
+						<p><a href="/api-whatsapp-faq" class="text-success-dark">API WhatsApp FAQ</a></p>
+	
+				  </div>
+				  <div class="column">
+					  
+						<h2 class="has-text-success">Fale Conosco</h2>
+						<p><a href="mailto:contato@connectzap.com.br" class="text-success-dark"><i class="fa-solid fa-at"></i> contato@connectzap.com.br</a></p>
+						<p><a href="https://api.whatsapp.com/send?phone=5521981587295&text=Ol%C3%A1!%20Preciso%20de%20um%20suporte%20no%20ConnectZap" class="text-success-dark"><i class="fa-brands fa-whatsapp"></i> +55(21)9 8158-7295</a></p>			
+						<p><a href="/contato" class="text-success-dark"><i class="fa-solid fa-envelope"></i> Envie-nos uma mensagem</a></p>						
+					
+				  </div>
+				</div>
+							
+			</div>
+			<div class="content">			
+				<hr>
+				<div class="columns">
+					<div class="column">
+	  
+						© 2024 - ConnectZap - Todos os direitos Reservados.
+	  
+					</div>
+					<div class="column">
+	  
+						<a href="/politica-privacidade" class="text-success-dark">Política de Privacidade</a>
+	  
+					</div>
+					<div class="column has-text-right">
+						
+						<div class="columns">
+							<div class="column has-text-right">
+								<a href="https://www.connectzap.es"><img src="img/lang-es.webp" alt="Trocar para idioma Espanhol"></a>
+								<a href="#"><img src="img/lang-pt-br.webp" alt="Idioma português do Brasil"></a>
+							</div>	
+						</div>
+					  
+					</div>
+				  </div>
+			</div>
+
+		</div>
+	</footer>
+
+	<!--<script src="assets/wp/floating-wpp.js"></script>
+	<script src="js/main.js"></script>-->
+
+	<script src="assets/wp/floating-wpp.min.js"></script>
+	<script src="js/main.min.js"></script>
+
+</body>
+</html>
