@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			isValid = !1
 		}
 		if (txtSenha.value.trim() != txtConfime.value.trim()) {
-			submitMSG(!1, "As senhas estão diferentes");
+			submitMSG(!1, "Las contraseñas son diferentes");
 			isValid = !1
 		}
 		var country = document.getElementById('country');
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				if (xhr.status === 200) {
 					var response = xhr.responseText;
 					if (response === "ok") {
-						submitMSG(!0, "Cadastro efetuado com sucesso!");
+						submitMSG(!0, "¡Registro completado exitosamente!");
 						txtNome.value = '';
 						txtDoc.value = '';
 						txtEmail.value = '';
@@ -79,12 +79,12 @@ document.addEventListener('DOMContentLoaded', function () {
 						submitMSG(!1, response)
 					}
 				} else {
-					submitMSG(!1, "Ocorreu um erro. Tente novamente mais tarde.")
+					submitMSG(!1, "Ocurrio un error. Vuelve a intentarlo más tarde.")
 				}
 			};
 			xhr.send(data.join('&'))
 		} else {
-			submitMSG(!1, "Por favor, preencha os campos obrigatórios.")
+			submitMSG(!1, "Por favor llene los campos requeridos.")
 		}
 	});
 
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	// Adiciona evento para validar ao sair do campo
 	var inputNome = document.getElementById('txtNome');
 	inputNome.addEventListener('blur', function () {
-		let validate = validarPreenchimento(inputNome, 'Nome');
+		let validate = validarPreenchimento(inputNome, 'Nombre');
 		let btnEnviar = document.getElementById('btnEnviar');
 		if (validate) {
 			// btnEnviar.disabled = false;
@@ -122,19 +122,19 @@ document.addEventListener('DOMContentLoaded', function () {
 	// Adiciona evento para validar ao sair do campo txtSenha
 	var inputSenha = document.getElementById('txtSenha');
 	inputSenha.addEventListener('blur', function () {
-	let validate = validarPreenchimento(inputSenha, 'Senha');
+	let validate = validarPreenchimento(inputSenha, 'Contraseña');
 	});   
 
 	// Adiciona evento para validar ao sair do campo txtConfime
 	var inputConfirmeSenha = document.getElementById('txtConfime');
 	inputConfirmeSenha.addEventListener('blur', function () {
-	let validate = validarPreenchimento(inputConfirmeSenha, 'Confirme Senha');
+	let validate = validarPreenchimento(inputConfirmeSenha, 'confirmar Contraseña');
 	});   
 
 	// Adiciona evento para validar ao sair do campo txtTel
 	var inputTel = document.getElementById('txtTel');
 	inputTel.addEventListener('blur', function () {
-		let validate = validarPreenchimento(inputTel, 'Telefone');
+		let validate = validarPreenchimento(inputTel, 'Teléfono');
 	});  
 	
 

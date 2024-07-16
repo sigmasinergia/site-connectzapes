@@ -108,7 +108,7 @@ function exibirSucesso(input) {
 function validarPreenchimento(input, nome) {
 	var regex = /^[A-Za-zÀ-ÖØ-öø-ÿ\s.'-]+$/;
 	if (input.value.trim() === "") {
-		exibirErro(nome + " não pode ser vazio!", input);
+		exibirErro(nome + " ¡no puede estar vacío!", input);
 		return false;
 	} 
 	//else if (!regex.test(input.value)) {
@@ -124,22 +124,23 @@ function validarDocumento(input) {
 	documento = input.value.replace(/\D/g, "");
 
 	if (input.value.trim() === "") {
-		exibirErro("CPF/CNPJ não pode ser vazio!", input);
+		//linha abaixo era CNPJ/CPF
+		exibirErro("¡El documento no puede estar vacío!", input);
 		return false;
 	} else if (documento.length <= 11) {
 		// Validação de CPF
 		if (!validarCPF(documento)) {
-			exibirErro("CPF Inválido!", input);
+			exibirErro("¡Documento no válido!", input);
 			return false;
 		}
 	} else if (documento.length >= 14) {
 		// Validação de CNPJ
 		if (!validarCNPJ(documento)) {
-			exibirErro("CNPJ Inválido!", input);
+			exibirErro("¡Documento no válido!", input);
 			return false;
 		}
 	} else {
-		exibirErro("Documento Inválido!", input);
+		exibirErro("¡Documento no válido!", input);
 		return false;
 	}
 

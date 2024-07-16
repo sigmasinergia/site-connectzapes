@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
     wppHtml += '            <strong class="close">×</strong>';
     wppHtml += '        </div>';
     wppHtml += '        <div style="z-index: -1;">';
-    wppHtml += '            <div class="floating-wpp-message">Como podemos ajudar?</div>';
+    wppHtml += '            <div class="floating-wpp-message">¿Cómo podemos ayudar?</div>';
     wppHtml += '            <div class="floating-wpp-input-message"><textarea id="textWP"></textarea>';
     wppHtml += '                <div class="floating-wpp-btn-send">';
     wppHtml += '                    <a href="#">';

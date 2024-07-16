@@ -31,20 +31,20 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 		var htmlFormLogin = '<form id="login-form" method="post" accept-charset="utf-8">';
 		htmlFormLogin += '		<div class="field">';
-		htmlFormLogin += '			<label class="label">Usuário*</label>';
+		htmlFormLogin += '			<label class="label">Usuario*</label>';
 		htmlFormLogin += '			<div class="control">';
-		htmlFormLogin += '				<input id="email" class="input bg-success-color-light" type="email" placeholder="Preencha o seu e-mail" required="">';
+		htmlFormLogin += '				<input id="email" class="input bg-success-color-light" type="email" placeholder="Complete su E-mail" required="">';
 		htmlFormLogin += "			</div>";
 		htmlFormLogin += "		</div>";
 		htmlFormLogin += '		<div class="field">';
-		htmlFormLogin += '			<label class="label">Senha*</label>';
+		htmlFormLogin += '			<label class="label">Contraseña*</label>';
 		htmlFormLogin += '			<div class="control">';
-		htmlFormLogin += '				<input id="pwd" class="input bg-success-color-light" type="password" placeholder="Preencha a sua senha" required="">';
+		htmlFormLogin += '				<input id="pwd" class="input bg-success-color-light" type="password" placeholder="Complete su contraseña" required="">';
 		htmlFormLogin += "			</div>";
 		htmlFormLogin += "		</div>";
 		htmlFormLogin += '		<div class="control text-center">';
 		htmlFormLogin += '			<p><button type="submit" class="button is-success btn-entrar"> <i class="fa-solid fa-paper-plane mr-10"></i> Entrar</button></p>';
-		htmlFormLogin += '			<p><a href="https://painel.connectzap.com.br/login/forgot_password.php" target="_blank" class="button is-link btn-entrar"> <i class="fa-solid fa-key mr-10"></i> Esqueci</a></p>';
+		htmlFormLogin += '			<p><a href="https://painel.connectzap.com.br/login/forgot_password.php" target="_blank" class="button is-link btn-entrar"> <i class="fa-solid fa-key mr-10"></i> Me olvidé</a></p>';
 		htmlFormLogin += "		</div>";
 		htmlFormLogin += '		<div id="msgSubmitLogin"></div>';
 		htmlFormLogin += "	</form>";
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			var formStatus = document.createElement("div");
 			formStatus.className = "form_status text-center";
 			formStatus.style.width = "100%";
-			formStatus.innerHTML = '<p><i class="fa fa-spinner fa-spin"></i> Aguarde...</p>';
+			formStatus.innerHTML = '<p><i class="fa fa-spinner fa-spin"></i> Esperar...</p>';
 			formLogin.insertBefore(formStatus, formLogin.firstChild);
 			xhr.onload = function () {
 				var formStatusElements = document.getElementsByClassName("form_status");
@@ -96,28 +96,28 @@ document.addEventListener("DOMContentLoaded", function () {
 				}
 				if (xhr.status === 200) {
 					var data = xhr.responseText;
-					console.log("response data:", data);
+					//console.log("response data:", data);
 					let response = JSON.parse(data);
-					console.log("response.codigo:", response.codigo);
+					//console.log("response.codigo:", response.codigo);
 					if (response.codigo && response.codigo !== !1) {
-						submitMSGLogin(!0, "Sucesso!");
+						submitMSGLogin(!0, "¡Éxito!");
 						setTimeout(function () {
 							if (response.codigo !== !1) {
 								window.location.href = "https://painel.connectzap.com.br/login/redirect.php?redirect=true&iduser=" + response.iduser;
 							}
 						}, 2000);
 					} else {
-						console.error("Menssagem de erro: " + response.mensagem);
+						console.error("Mensaje de error: " + response.mensagem);
 						submitMSGLogin(!1, response.mensagem);
 						window.scrollTo(0, 0);
 					}
 				} else {
-					submitMSG(!1, "Ocorreu um erro.");
+					submitMSG(!1, "Ocurrio un error.");
 				}
 			};
 			xhr.send(data.join("&"));
 		} else {
-			submitMSGLogin(!1, "Por favor, preencha os campos obrigatórios.");
+			submitMSGLogin(!1, "Por favor llene los campos requeridos.");
 		}
 	});
 	function submitMSGLogin(valid, msg) {

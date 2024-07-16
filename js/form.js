@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
           if (xhr.status === 200) {
             var response = xhr.responseText;
             if (response === "ok") {
-              submitMSG(!0, "E-mail enviado com sucesso!");
+              submitMSG(!0, "¡Email enviado con éxito!");
               txtNome.value = "";
               txtEmpresa.value = "";
               txtDoc.value = "";
@@ -95,15 +95,15 @@ document.addEventListener("DOMContentLoaded", function () {
               txtAssunto.value = "";
               txtMensagem.value = "";
             } else {
-              submitMSG(!1, "Ocorreu um erro. Tente novamente mais tarde.");
+              submitMSG(!1, "Ocurrio un error. Vuelve a intentarlo más tarde.");
             }
           } else {
-            submitMSG(!1, "Ocorreu um erro. Tente novamente mais tarde.");
+            submitMSG(!1, "Ocurrio un error. Vuelve a intentarlo más tarde.");
           }
         };
         xhr.send(data.join("&"));
       } else {
-        submitMSG(!1, "Por favor, preencha os campos obrigatórios.");
+        submitMSG(!1, "Por favor llene los campos requeridos.");
       }
     });
     function submitMSG(valid, msg) {
@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", function () {
      // Adiciona evento para validar ao sair do campo txtNome
      var inputNome = document.getElementById('txtNome');
      inputNome.addEventListener('blur', function () {
-       let validate = validarPreenchimento(inputNome, 'Nome');
+       let validate = validarPreenchimento(inputNome, 'Nombre');
        let btnEnviar = document.getElementById('btnEnviar');
        if (validate) {
          // btnEnviar.disabled = false;
@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
      // Adiciona evento para validar ao sair do campo txtTel
      var inputTel = document.getElementById('txtTel');
      inputTel.addEventListener('blur', function () {
-       let validate = validarPreenchimento(inputTel, 'Telefone');
+       let validate = validarPreenchimento(inputTel, 'Teléfono');
      });   
    
      // Adiciona evento para validar ao sair do campo txtEmail
@@ -146,13 +146,13 @@ document.addEventListener("DOMContentLoaded", function () {
      // Adiciona evento para validar ao sair do campo txtAssunto
      var inputAssunto = document.getElementById('txtAssunto');
      inputAssunto.addEventListener('blur', function () {
-       let validate = validarPreenchimento(inputAssunto, 'Assunto');
+       let validate = validarPreenchimento(inputAssunto, 'Sujeto');
      });  
   
       // Adiciona evento para validar ao sair do campo txtMensagem
       var inputMensagem = document.getElementById('txtMensagem');
       inputMensagem.addEventListener('blur', function () {
-        let validate = validarPreenchimento(inputMensagem, 'Menagem');
+        let validate = validarPreenchimento(inputMensagem, 'Mensaje');
       });  
       
   
