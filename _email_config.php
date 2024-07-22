@@ -82,8 +82,8 @@ function enviarEmail($para, $assunto, $mensagem, $copia = NULL, $copia_oculta = 
 	    $mail->setFrom('contato@connectzap.com.br', 'ConnectZap');
     	$mail->addAddress($para);     //Add a recipient
 	    //$mail->addAddress('ellen@example.com', 'Ellen'); //Name is optional
-    	//$mail->addReplyTo('jader@connectzap.com.br', 'Jader');
-		$mail->addReplyTo('alexandre@inframicro.com.br', 'Teste');
+    	$mail->addReplyTo('jader@connectzap.com.br', 'Jader');
+		//$mail->addReplyTo('alexandre@inframicro.com.br', 'Teste');
 
 		if(!empty($copia)){
 	    	$mail->addCC($copia);
@@ -107,7 +107,7 @@ function enviarEmail($para, $assunto, $mensagem, $copia = NULL, $copia_oculta = 
 
 	    $envio = $mail->send();
 	    if($envio == true){
-    		$error = 'Mensagem enviada!';
+    		$error = 'Mensage enviada!';
 	    }else{
 	    	$error = $mail->ErrorInfo;
     		echo $mail->ErrorInfo;
@@ -116,7 +116,7 @@ function enviarEmail($para, $assunto, $mensagem, $copia = NULL, $copia_oculta = 
 	} 
 	catch (Exception $e) {
 		echo $e->getMessage();
-		$error = "Não foi possível enviar a mensagem: {$e->getMessage()}"; 
+		$error = "No se puede enviar el mensaje: {$e->getMessage()}"; 
 		return false;
 	}
 }

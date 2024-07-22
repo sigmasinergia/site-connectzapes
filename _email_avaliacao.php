@@ -236,7 +236,7 @@ function enviarEmail($strName, $strEmail, $strSenha, $strToken)
 		$mail->ClearAttachments();
 		//
 		if ($envio == true) {
-			$error = 'Mensagem enviada!';
+			$error = 'Mensage enviada!';
 		} else {
 			$error = $mail->ErrorInfo;
 			echo $mail->ErrorInfo;
@@ -244,7 +244,7 @@ function enviarEmail($strName, $strEmail, $strSenha, $strToken)
 		return $envio;
 	} catch (Exception $e) {
 		echo $e->getMessage();
-		$error = "Não foi possível enviar a mensagem: {$e->getMessage()}";
+		$error = "No se puede enviar el mensaje: {$e->getMessage()}";
 		return false;
 	}
 }
@@ -254,24 +254,24 @@ function WhatsSendText($nome, $celular, $email, $senha, $newtoken)
 	//$url = 'https://n8n.connectzap.com.br/webhook/sendText';
 	$url = APIURL . "/sistema/sendText";
 
-	$corpo = 'Obrigado por escolher o *Connect Zap* como seu gestor de serviços de envio de mensagem.
-
-	Ao longo dos próximos *30 dias*, você poderá experimentar todas as funcionalidades para ver se o programa satisfaz às suas necessidades. Depois disso você pode cancelar a qualquer momento.
+	$corpo = 'Gracias por elegir *Connect Zap* como su administrador de servicios de mensajería.
 	
-	*Token de acesso para API:* ' . $newtoken . '
+	Durante los próximos *30 días*, podrás probar todas las funciones para ver si el programa satisface tus necesidades. Después de eso puedes cancelar en cualquier momento.
 	
-	*Login de acesso ao painel:*
+	*token de acceso API:* ' . $newtoken . '
 	
-	*Login de acesso:* ' . $email . '
-	*Senha:* ' . $senha . '
+	*Inicio de sesión de acceso al panel:*
 	
-	*Acessar Painel:* https://painel.connectzap.com.br/login/
+	*Acceder iniciar sesión:* ' . $email . '
+	*Contraseña:* ' . $senha . '
 	
-	*Solicitar suporte:* https://api.whatsapp.com/send?phone=5521981587295
+	*Panel de acceso:* https://painel.connectzap.com.br/login/
 	
-	*Manual Resumido:* https://painel.connectzap.com.br/tokens/manual.pdf
+	*Pedir soporte:* https://api.whatsapp.com/send?phone=5521981587295
 	
-	*Documentação Técnica da API:* https://documenter.getpostman.com/view/25310515/2s8ZDeSyEm
+	*Manual resumido:* https://painel.connectzap.com.br/tokens/manual.pdf
+	
+	*Documentación técnica API:* https://documenter.getpostman.com/view/25310515/2s8ZDeSyEm
 	';
 	//
 	$options = [
