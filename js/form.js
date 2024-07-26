@@ -156,18 +156,24 @@ document.addEventListener("DOMContentLoaded", function () {
       });  
       
   
-       // Adiciona evento para mascarar ao digitar
-     var inputtxtDoc = document.getElementById('txtDoc');
+    	// Adiciona evento para validar ao sair do campo txtDoc
+      var inputTel = document.getElementById('txtDoc');
+      inputTel.addEventListener('blur', function () {
+        let validate = validarPreenchimento(inputTel, 'Documento');
+      }); 
+      
+    // Adiciona evento para mascarar ao digitar
+     //var inputtxtDoc = document.getElementById('txtDoc');
      
      //inputtxtDoc.addEventListener('input', function () {
      //  inputtxtDoc.value = mascaraDocumento(inputtxtDoc.value);
      //});
    
-       // Adiciona evento para validar ao sair do campo
-     inputtxtDoc.addEventListener('blur', function () {
-       let validate = validarDocumento(inputtxtDoc);
-       let btnEnviar = document.getElementById('btnEnviar');
-     });
+     // Adiciona evento para validar ao sair do campo
+     //inputtxtDoc.addEventListener('blur', function () {
+     //  let validate = validarDocumento(inputtxtDoc);
+     //  let btnEnviar = document.getElementById('btnEnviar');
+     //});
   
   
   });
