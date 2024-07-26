@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
     wppHtml += '    </div>';
     wppHtml += '    <div id="WAContent" class="floating-wpp-popup">';
     wppHtml += '        <div class="floating-wpp-head">';
-    wppHtml += '            <span>Fale com a ConnectZap!</span>';
+    wppHtml += '            <span>¡Habla con ConnectZap!</span>';
     wppHtml += '            <strong class="close">×</strong>';
     wppHtml += '        </div>';
     wppHtml += '        <div style="z-index: -1;">';

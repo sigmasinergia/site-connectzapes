@@ -158,9 +158,10 @@ document.addEventListener("DOMContentLoaded", function () {
   
        // Adiciona evento para mascarar ao digitar
      var inputtxtDoc = document.getElementById('txtDoc');
-     inputtxtDoc.addEventListener('input', function () {
-       inputtxtDoc.value = mascaraDocumento(inputtxtDoc.value);
-     });
+     
+     //inputtxtDoc.addEventListener('input', function () {
+     //  inputtxtDoc.value = mascaraDocumento(inputtxtDoc.value);
+     //});
    
        // Adiciona evento para validar ao sair do campo
      inputtxtDoc.addEventListener('blur', function () {
