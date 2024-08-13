@@ -13,4 +13,4 @@ Allow: /
 Disallow: /phpmailer-6.9.1
 Disallow: /phpmailer-6.9.1/* 
 
-Sitemap: https://connectzap.com.br/sitemap.xml
+Sitemap: https://www.connectzap.es/sitemap.xml
