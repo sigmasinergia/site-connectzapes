@@ -86,7 +86,7 @@ try {
 	//
 	if ($createCpfcnpj >= 1) {
 		//
-		$mensagem = "Ocorreu um erro ao efetuar cadastro, usuário já se encontra cadastado.";
+		$mensagem = "Ocurrió un error al realizar el registro, el usuario ya está registrado.";
 		print $mensagem;
 		exit;
 		//
@@ -96,7 +96,7 @@ try {
 	//
 	if ($createEmail >= 1) {
 		//
-		$mensagem = "Ocorreu um erro ao efetuar cadastro, e-mail já se encontra cadastado.";
+		$mensagem = "Ocurrió un error al realizar el registro, el correo electrónico ya está registrado.";
 		print $mensagem;
 		exit;
 		//
@@ -166,7 +166,7 @@ try {
 		//
 	} else {
 		//
-		$mensagem = "Ocorreu um erro ao efetuar cadastro.";
+		$mensagem = "Ocurrió un error al realizar el registro.";
 		print $mensagem;
 		exit;
 		//
