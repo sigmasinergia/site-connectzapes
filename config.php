@@ -13,7 +13,7 @@ if (!defined('APIKEY'))
 //
 /** caminho no server para o sistema **/
 if (!defined('PAINELURL'))
-	define('PAINELURL', 'https://painel..connectzap.es');
+	define('PAINELURL', 'https://painel.connectzap.es');
 //
 /** caminho no server para o sistema **/
 if (!defined('APIURL'))

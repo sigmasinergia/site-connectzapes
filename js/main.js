@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		htmlFormLogin += "		</div>";
 		htmlFormLogin += '		<div class="control text-center">';
 		htmlFormLogin += '			<p><button type="submit" class="button is-success btn-entrar"> <i class="fa-solid fa-paper-plane mr-10"></i> Entrar</button></p>';
-		htmlFormLogin += '			<p><a href="https://painel..connectzap.es/login/forgot_password.php" target="_blank" class="button is-link btn-entrar"> <i class="fa-solid fa-key mr-10"></i> Me olvidé</a></p>';
+		htmlFormLogin += '			<p><a href="https://painel.connectzap.es/login/forgot_password.php" target="_blank" class="button is-link btn-entrar"> <i class="fa-solid fa-key mr-10"></i> Me olvidé</a></p>';
 		htmlFormLogin += "		</div>";
 		htmlFormLogin += '		<div id="msgSubmitLogin"></div>';
 		htmlFormLogin += "	</form>";
@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 		if (isValid) {
 			var xhr = new XMLHttpRequest();
-			xhr.open("POST", "https://painel..connectzap.es/login/login.php", !0);
+			xhr.open("POST", "https://painel.connectzap.es/login/login.php", !0);
 			xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 			var data = [];
 			data.push(
@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
 						submitMSGLogin(!0, "¡Éxito!");
 						setTimeout(function () {
 							if (response.codigo !== !1) {
-								window.location.href = "https://painel..connectzap.es/login/redirect.php?redirect=true&iduser=" + response.iduser;
+								window.location.href = "https://painel.connectzap.es/login/redirect.php?redirect=true&iduser=" + response.iduser;
 							}
 						}, 2000);
 					} else {

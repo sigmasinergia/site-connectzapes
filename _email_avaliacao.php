@@ -74,10 +74,10 @@ function enviarEmail($strName, $strEmail, $strSenha, $strToken)
 	<strong>Senha: </strong>' . $strSenha . '
 	<br/>
 	<br/>
-	<div style="height: 42px; width: 180px; display: block; background-color: #008000; border-radius: 21px;"><a class="HtmlMerger_64efe3a0dbb94dfcbbe533513e0d32ce" style="text-decoration: none; height: 42px; font-weight: 400; color: #ffffff; display: block; line-height: 43px;" href="https://painel..connectzap.es/login/" target="_blank"><strong>Acessar Painel</strong> </a></div>
+	<div style="height: 42px; width: 180px; display: block; background-color: #008000; border-radius: 21px;"><a class="HtmlMerger_64efe3a0dbb94dfcbbe533513e0d32ce" style="text-decoration: none; height: 42px; font-weight: 400; color: #ffffff; display: block; line-height: 43px;" href="https://painel.connectzap.es/login/" target="_blank"><strong>Acessar Painel</strong> </a></div>
 	<br />
 	<br />
-	<div style="height: 42px; width: 180px; display: block; background-color: #008000; border-radius: 21px;"><a class="HtmlMerger_64efe3a0dbb94dfcbbe533513e0d32ce" style="text-decoration: none; height: 42px; font-weight: 400; color: #ffffff; display: block; line-height: 43px;" href="https://painel..connectzap.es/tokens/manual.pdf" target="_blank"><strong>Manual Resumido</strong> </a></div>
+	<div style="height: 42px; width: 180px; display: block; background-color: #008000; border-radius: 21px;"><a class="HtmlMerger_64efe3a0dbb94dfcbbe533513e0d32ce" style="text-decoration: none; height: 42px; font-weight: 400; color: #ffffff; display: block; line-height: 43px;" href="https://painel.connectzap.es/tokens/manual.pdf" target="_blank"><strong>Manual Resumido</strong> </a></div>
 	<br />
 	<br />
 	<div style="height: 42px; width: 180px; display: block; background-color: #008000; border-radius: 21px;"><a class="HtmlMerger_64efe3a0dbb94dfcbbe533513e0d32ce" style="text-decoration: none; height: 42px; font-weight: 400; color: #ffffff; display: block; line-height: 43px;" href="https://documenter.getpostman.com/view/25310515/2s8ZDeSyEm" target="_blank"><strong>Documentação da API</strong> </a></div>
@@ -265,11 +265,11 @@ function WhatsSendText($nome, $celular, $email, $senha, $newtoken)
 	*Acceder iniciar sesión:* ' . $email . '
 	*Contraseña:* ' . $senha . '
 	
-	*Panel de acceso:* https://painel..connectzap.es/login/
+	*Panel de acceso:* https://painel.connectzap.es/login/
 	
 	*Pedir soporte:* https://api.whatsapp.com/send?phone=5521981587295
 	
-	*Manual resumido:* https://painel..connectzap.es/tokens/manual.pdf
+	*Manual resumido:* https://painel.connectzap.es/tokens/manual.pdf
 	
 	*Documentación técnica API:* https://documenter.getpostman.com/view/25310515/2s8ZDeSyEm
 	';
